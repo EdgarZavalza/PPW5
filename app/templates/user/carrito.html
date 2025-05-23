@@ -39,8 +39,12 @@
 					</td>
 					<td>${{ "%.2f"|format(item[6]) }}</td>
 					<td>
-						<a href="{{ url_for('eliminar_del_carrito', item_id=item[0]) }}"
-							class="btn btn-sm btn-outline-danger">Eliminar</a>
+						<form method="post" action="{{ url_for('eliminar_del_carrito', item_id=item[0]) }}"
+							class="d-inline">
+							<input type="number" name="cantidad" value="{{ item[5] }}" min="1"
+								class="form-control form-control-sm" style="width: 70px;">
+							<button type="submit" class="btn btn-sm btn-danger mt-1">Eliminar</button>
+						</form>
 					</td>
 				</tr>
 				{% endfor %}
