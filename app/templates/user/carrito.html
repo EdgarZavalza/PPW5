@@ -41,8 +41,6 @@
 					<td>
 						<form method="post" action="{{ url_for('eliminar_del_carrito', item_id=item[0]) }}"
 							class="d-inline">
-							<input type="number" name="cantidad" value="{{ item[5] }}" min="1"
-								class="form-control form-control-sm" style="width: 70px;">
 							<button type="submit" class="btn btn-sm btn-danger mt-1">Eliminar</button>
 						</form>
 					</td>
